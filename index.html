@@ -1,364 +1,359 @@
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elon Musk Tweet Analysis</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <title>An Analysis of Elon Musk's Twitter</title>
-    <style id="plotly.js-style-global"></style>
-    <style id="plotly.js-style-modebar-160ba4"></style>
-    <style id="plotly.js-style-modebar-c7afa0"></style>
-    <style id="plotly.js-style-modebar-d75e5f"></style>
-    <style id="plotly.js-style-modebar-7ba287"></style>
-    <style id="plotly.js-style-modebar-979b85"></style>
-    <style id="plotly.js-style-modebar-4fa7ea"></style>
-    <style id="plotly.js-style-modebar-d3994e"></style>
-    <script charset="utf-8" src="https://platform.twitter.com/js/tweet.5b94507822be1b77b58bef86fc7cd9f7.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <style type="text/css">
-        @font-face {
-            font-weight: 400;
-            font-style: normal;
-            font-family: 'Circular-Loom';
-            src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
-        }
-        @font-face {
-            font-weight: 500;
-            font-style: normal;
-            font-family: 'Circular-Loom';
-            src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
-        }
-        @font-face {
-            font-weight: 700;
-            font-style: normal;
-            font-family: 'Circular-Loom';
-            src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
-        }
-
-        @font-face {
-            font-weight: 900;
-            font-style: normal;
-            font-family: 'Circular-Loom';
-            src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
-        }
-        body {
-            margin-top: 0px;
-            margin-left: 75px;
-            margin-right: 75px;
-        }
-    </style>
+        type="text/css" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1080.0" data-gr-ext-installed="">
-    <div id="carousel-ID" class="carousel slide pointer-event" data-ride="carousel" data-interval="3000">
+<body>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carousel-ID" data-slide-to="0" class=""></li>
-            <li data-target="#carousel-ID" data-slide-to="1" class=""></li>
-            <li data-target="#carousel-ID" data-slide-to="2" class=""></li>
-            <li data-target="#carousel-ID" data-slide-to="3" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item"><img
-                    src="https://e3.365dm.com/22/10/1600x900/skynews-elon-musk-twitter_5938597.jpg?20221027161832"
-                    class="d-block w-100" alt="carousel image">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="./assets/images/elon_musk_1.jpg" " alt=" First slide">
             </div>
-            <div class="carousel-item"><img src="https://thenewsvoice.com/wp-content/uploads/2021/04/mad-marketing.jpg"
-                    class="d-block w-100" alt="carousel image">
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./assets/images/elon_musk_2.jpg" alt="Second slide" />
             </div>
-            <div class="carousel-item active carousel-item-left"><img
-                    src="https://static01.nyt.com/images/2022/11/12/arts/11COMEDY-MUSK1/11COMEDY-MUSK1-videoSixteenByNine3000.jpg"
-                    class="d-block w-100" alt="carousel image">
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./assets/images/elon_musk_3.jpg" alt="Third slide" />
             </div>
-            <div class="carousel-item carousel-item-next carousel-item-left"><img
-                    src="https://images.hdqwalls.com/wallpapers/elon-musk-4k-rq.jpg"
-                    class="d-block w-100" alt="carousel image">
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./assets/images/elon_musk_4.jpg" alt="Fourth slide" />
             </div>
-        </div><a class="carousel-control-prev" href="#carousel-ID" role="button" data-slide="prev"><span
-                class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a
-            class="carousel-control-next" href="#carousel-ID" role="button" data-slide="next"><span
-                class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
+
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <center>
-                <h1 class="display-4">@elonmusk: Style and Influence</h1>
-                <p class="lead">An analysis of Elon Musk's tweets and their influence on markets and pop culture. </p>
-            </center>
+        <div class="title-container">
+            <h1>@elonmusk: Style and Influence</h1>
+            <h4>
+                An analysis of Elon Musk's tweets and their influence on markets and
+                pop culture.
+            </h4>
         </div>
     </div>
-    
-        <h1 style="font-size:50px;">Introduction</h1>
-        <div class="row">
-            <div class="col-sm-9">
-                <p>Elon Musk is the richest man in the world and showcases his eccentric personality as an avid Twitter
-                    user. He frequently tweets about his companies Tesla and SpaceX, his advocacy for cryptocurrency,
-                    and the platform Twitter itself. We will take a look at Musk's Twitter style and analyze potential
-                    correlations between his tweets and relevant stock prices and Google search trends.
-                </p>
-            </div>
-            <div class="col"><img
-                    src="https://observer.com/wp-content/uploads/sites/2/2020/01/elon-musk-twitter-advice.jpg?quality=80&amp;w=920"
-                    class="img-fluid mr-auto d-block border-0 rounded-pill"></div>
-            </div>
-        <hr>
-        <h2 style="font-size:50px;">Tweet Style</h2>
-        <p style="font-size:30px; font-style:italic;"> Top Five Most-Liked Tweets</p>
-        <div class="row">
-            <div class="container">
-                <p>Using an Python algorithm, I found Musk's top five most-liked tweets as of March 5, 2022.</p>
+    <hr />
+    <div class="introduction-container">
+        <div>
+            <h2>Introduction</h2>
+            <p>
+                Elon Musk, the world's wealthiest individual, is known for his
+                eccentric personality and active presence on Twitter. He frequently
+                uses the platform to share updates about his companies, Tesla and
+                SpaceX, his support for cryptocurrency, and his opinions about
+                Twitter. In this website, I will examine Musk's Twitter style and
+                investigate potential links between his tweets, relevant stock prices,
+                and Google search trends.
+            </p>
+        </div>
+        <div>
+            <img align="right" src="./assets/images/elon_musk_5.jpg" class="elon" />
+        </div>
+    </div>
+    <hr />
+    <h2>Tweet Style</h2>
+    <p>
+        This section will examine Elon Musk's tweeting style, covering his top
+        five most-liked tweets, tweet frequency and interactions, tweet sentiment,
+        and frequently used words.
+    </p>
+    <hr />
+    <h3>Top Five Most-Liked Tweets</h3>
+    <p>
+        Using a Python algorithm, I found Musk's top five most-liked tweets as of
+        March 5, 2022:
+    </p>
 
-                <h3>1. The coronavirus panic is dumb</h3>
-                <center>
-                    <div class="twitter-tweet twitter-tweet-rendered"
-                        style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;">
-                        <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true"
-                            allowfullscreen="true" class=""
-                            style="position: absolute; visibility: hidden; width: 0px; height: 0px; display: block; flex-grow: 1;"
-                            title="Twitter Tweet"
-                            src="https://platform.twitter.com/embed/Tweet.html?dnt=false&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvZmYiLCJ2ZXJzaW9uIjpudWxsfX0%3D&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=1236029449042198528&amp;lang=en&amp;origin=https%3A%2F%2Fwww3.nd.edu%2F~skumar5%2Fteaching%2Fadditional%2Fspring-2022-eg%2Fproject-06-15%2F&amp;sessionId=39004bd4376ca0599e7919f54f52386b652050c3&amp;theme=light&amp;widgetsVersion=1bfeb5c3714e8%3A1661975971032&amp;width=550px"
-                            data-tweet-id="1236029449042198528"></iframe>
-                    </div>
-                    <blockquote class="twitter-tweet" data-twitter-extracted-i1663879934028659336="true">
-                        <p lang="en" dir="ltr">The coronavirus panic is dumb</p>— Elon Musk (@elonmusk) <a
-                            href="https://twitter.com/elonmusk/status/1236029449042198528?ref_src=twsrc%5Etfw">March 6,
-                            2020</a>
-                    </blockquote>
-                    <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </center>
-                <br>
-                <h3>2. Had to be done ur welcome</h3>
-                <center>
-                    <div class="twitter-tweet twitter-tweet-rendered"
-                        style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;">
-                        <iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true"
-                            allowfullscreen="true" class=""
-                            style="position: absolute; visibility: hidden; width: 0px; height: 0px; display: block; flex-grow: 1;"
-                            title="Twitter Tweet"
-                            src="https://platform.twitter.com/embed/Tweet.html?dnt=false&amp;embedId=twitter-widget-1&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvZmYiLCJ2ZXJzaW9uIjpudWxsfX0%3D&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=1053390822991790083&amp;lang=en&amp;origin=https%3A%2F%2Fwww3.nd.edu%2F~skumar5%2Fteaching%2Fadditional%2Fspring-2022-eg%2Fproject-06-15%2F&amp;sessionId=39004bd4376ca0599e7919f54f52386b652050c3&amp;theme=light&amp;widgetsVersion=1bfeb5c3714e8%3A1661975971032&amp;width=550px"
-                            data-tweet-id="1053390822991790083"></iframe>
-                    </div>
-                    <blockquote class="twitter-tweet" data-twitter-extracted-i1663879934028659336="true">
-                        <p lang="en" dir="ltr">Had to been done ur welcome <a
-                                href="https://t.co/7jT0f9lqIS">pic.twitter.com/7jT0f9lqIS</a></p>— Elon Musk (@elonmusk)
-                        <a href="https://twitter.com/elonmusk/status/1053390822991790083?ref_src=twsrc%5Etfw">October
-                            19, 2018</a>
-                    </blockquote>
-                    <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </center>
-                <br>
-                <h3>3. ur welcome</h3>
-                <center>
-                    <div class="twitter-tweet twitter-tweet-rendered"
-                        style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;">
-                        <iframe id="twitter-widget-2" scrolling="no" frameborder="0" allowtransparency="true"
-                            allowfullscreen="true" class=""
-                            style="position: absolute; visibility: hidden; width: 0px; height: 0px; display: block; flex-grow: 1;"
-                            title="Twitter Tweet"
-                            src="https://platform.twitter.com/embed/Tweet.html?dnt=false&amp;embedId=twitter-widget-2&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvZmYiLCJ2ZXJzaW9uIjpudWxsfX0%3D&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=1357236825589432322&amp;lang=en&amp;origin=https%3A%2F%2Fwww3.nd.edu%2F~skumar5%2Fteaching%2Fadditional%2Fspring-2022-eg%2Fproject-06-15%2F&amp;sessionId=39004bd4376ca0599e7919f54f52386b652050c3&amp;theme=light&amp;widgetsVersion=1bfeb5c3714e8%3A1661975971032&amp;width=550px"
-                            data-tweet-id="1357236825589432322"></iframe>
-                    </div>
-                    <blockquote class="twitter-tweet" data-twitter-extracted-i1663879934028659336="true">
-                        <p lang="en" dir="ltr">ur welcome <a
-                                href="https://t.co/e2KF57KLxb">pic.twitter.com/e2KF57KLxb</a></p>— Elon Musk (@elonmusk)
-                        <a href="https://twitter.com/elonmusk/status/1357236825589432322?ref_src=twsrc%5Etfw">February
-                            4, 2021</a>
-                    </blockquote>
-                    <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </center>
-                <br>
-                <h3>4. My 14-year-old son, Saxon, said he feels like 2021 will be a good year. I agree. Let us all make it so.</h3>
-                <center>
-                    <div class="twitter-tweet twitter-tweet-rendered"
-                        style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;">
-                        <iframe id="twitter-widget-3" scrolling="no" frameborder="0" allowtransparency="true"
-                            allowfullscreen="true" class=""
-                            style="position: absolute; visibility: hidden; width: 0px; height: 0px; display: block; flex-grow: 1;"
-                            title="Twitter Tweet"
-                            src="https://platform.twitter.com/embed/Tweet.html?dnt=false&amp;embedId=twitter-widget-3&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvZmYiLCJ2ZXJzaW9uIjpudWxsfX0%3D&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=1347978218494513152&amp;lang=en&amp;origin=https%3A%2F%2Fwww3.nd.edu%2F~skumar5%2Fteaching%2Fadditional%2Fspring-2022-eg%2Fproject-06-15%2F&amp;sessionId=39004bd4376ca0599e7919f54f52386b652050c3&amp;theme=light&amp;widgetsVersion=1bfeb5c3714e8%3A1661975971032&amp;width=550px"
-                            data-tweet-id="1347978218494513152"></iframe>
-                    </div>
-                    <blockquote class="twitter-tweet" data-twitter-extracted-i1663879934028659336="true">
-                        <p lang="en" dir="ltr">My 14-year-old son, Saxon, said he feels like 2021 will be a good year. I
-                            agree. Let us all make it so.</p>— Elon Musk (@elonmusk) <a
-                            href="https://twitter.com/elonmusk/status/1347978218494513152?ref_src=twsrc%5Etfw">January
-                            9, 2021</a>
-                    </blockquote>
-                    <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </center>
-                <br>
-                <h3>5. You can now buy a Tesla with Bitcoin</h3>
-                <center>
-                    <div class="twitter-tweet twitter-tweet-rendered"
-                        style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;">
-                        <iframe id="twitter-widget-4" scrolling="no" frameborder="0" allowtransparency="true"
-                            allowfullscreen="true" class=""
-                            style="position: absolute; visibility: hidden; width: 0px; height: 0px; display: block; flex-grow: 1;"
-                            title="Twitter Tweet"
-                            src="https://platform.twitter.com/embed/Tweet.html?dnt=false&amp;embedId=twitter-widget-4&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvZmYiLCJ2ZXJzaW9uIjpudWxsfX0%3D&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=1374617643446063105&amp;lang=en&amp;origin=https%3A%2F%2Fwww3.nd.edu%2F~skumar5%2Fteaching%2Fadditional%2Fspring-2022-eg%2Fproject-06-15%2F&amp;sessionId=39004bd4376ca0599e7919f54f52386b652050c3&amp;theme=light&amp;widgetsVersion=1bfeb5c3714e8%3A1661975971032&amp;width=550px"
-                            data-tweet-id="1374617643446063105"></iframe>
-                    </div>
-                    <blockquote class="twitter-tweet" data-twitter-extracted-i1663879934028659336="true">
-                        <p lang="en" dir="ltr">You can now buy a Tesla with Bitcoin</p>— Elon Musk (@elonmusk) <a
-                            href="https://twitter.com/elonmusk/status/1374617643446063105?ref_src=twsrc%5Etfw">March 24,
-                            2021</a>
-                    </blockquote>
-                    <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                <hr> <br>
-                </center>
-            </div>
-            </div>
-                <p style="font-size:30px; font-style:italic;">Tweet Freqency and Interactions</p>
-            <iframe src="plotly/viz_tweet_freq.html" frameborder="0" width="1225" height="525"></iframe>
-                <p>These visualizations show Elon Musk's Tweet frequency by month (1-12) and Tweet frequency by day (1-31). From the Tweet Frequency 
-                    vs. Month plot, we can see that he Tweets the most during July and May, respectively. Musk's tweet frequency is 
-                    generally higher during the first half of the year compared to the latter half of the year, tweeting the least 
-                    amount in September. The Tweet Frequency vs. Day plot shows that Musk's most popular Tweet date is the 25th of 
-                    the month. The distribution is roughly uniform, indicating roughly consistent tweeting throughout each month.
-                </p>
-                <iframe src="plotly/viz_likes_retweets_replies.html" scrolling="no" frameborder="0" width="1225" height="475"></iframe>
-                <iframe src="plotly/viz_likes_retweets_replies_cont.html" scrolling="no" frameborder="0" width="1225" height="475"></iframe>
-                <p>The next visualizations show Elon Musk's Twitter likes, retweets, and replies from 2010 to March 2022. The upper plots break 
-                    up the distribution by year while the lower plots break up the distribution by day. The likes, retweets, and replies show similar
-                    trends in both the upper and lower sets. The plots show that Elon Musk had an explosion of growth in Twitter popularity,
-                    especially starting from 2016. Musk is currently on pace to have more Twitter interactions in the year 2022. </p>
-                <iframe src="plotly/viz_subj_pol.html" scrolling="no" frameborder="0" width="1225" height="500"></iframe>
-                <iframe src="plotly/viz_vader.html" scrolling="no" frameborder="0" width="1225" height="500"></iframe>
-                <p>The two graphs above use different forms of sentiment analysis to quantify the
-                    sentiment of Musk's tweets. The upper Tweet Subjectivity vs. Polarity graph uses
-                    the TextBlob sentiment analyzer to find two values per tweet: (1) The subjectivity, which
-                    measures how opinionated or objective the tweet is, and (2) the polarity, which measures how
-                    emotionally positive or negative the tweet is. You can hover over a point on the plot to
-                    view the corresponding tweet. The Tweet Frequency vs. VADER Polarity graph uses VADER
-                    (Valence Aware Dictionary and sEntiment Reasoner) analysis to show the frequency of the positive or
-                    negative sentiments with scores between -1 and 1. VADER is optimized for social media data. <br><br>
-                    Both graphs show that Musk mainly tweets with positive sentiments. The upper plot features a roughly
-                    inverted bell curve, with most of his tweets falling near zero polarity and zero subjectivity. 
-                    The data on the bottom plot is skewed left; The highest concentration of his tweets have a VADER
-                    score between +0.4 and +0.45. An independent Python calculation found the ratio between positive 
-                    and negative tweets to be 3.59 using TextBlob and 3.30 using VADER. These results further emphasize 
-                    that Musk has a higher concentration of positive tweets than negative tweets. </p>
-                    <p style="font-size:30px; font-style:italic;">Most Commonly Used Words</p><br><br>
-                    </div>
-                    <div class="container-md">
-                    <img src="https://lh3.googleusercontent.com/f5RXRIXjDhWXvtiO3kcfrbv8fQOuD7He0ojMEqbTxBCbQIwp2GBN55ZEMGBz9PkZ1SQdMHhaGXhoG4Aj7qn4wv8hOy8x6JEdRcj2NnDqdjMZ0wKR4-HGUZzFr7woVRWroabBNQ5Ctw=w2400"
-                        alt="Elon Musk word clouds">
-                    </div>
-                <p>The four word clouds above shows Musk's most commonly tweeted words among all his
-                    tweets, his positive tweets, his neutral tweets, and his negative tweets. Common to all the
-                    word clouds is "will" being the largest and "Tesla" being the second largest. These
-                    results make sense as Musk is a visionary constantly concerned with the future. Tesla is one of his
-                    main efforts to make his vision a reality through the production and advancement of electric vehicles.
-                    Also common to all the word clouds are words relating to his companies Tesla and SpaceX, such as
-                    "car," "rocket," "model," and "Starship."</p>
-                    <!-- The beginning of the stock market section-->
-                <h2 style="font-size:50px;">Tweets and the Stock Market</h2>
-                <iframe src="plotly/viz_stocks_tweets.html" frameborder="0" width="2000" height="850"></iframe>
-                <p>The four graphs above show the stock price over time, the stock's moving 50 day
-                    average, and the frequency of Musk's tweets related to each stock for four relevant 
-                    stocks: Bitcoin, Dogecoin, Tesla, and Twitter. All values are normalized for more 
-                    effective comparison. The time ranges are set based on relevancy of the stock and 
-                    Musk's tweets. <br><br> The Bitcoin graph shows correlation between Musk's Twitter activity and 
-                    Bitcoin's stock trends. From late 2020 to late 2021, Musk's Bitcoin-related tweet frequency 
-                    increased right around the same times Bitcoin experienced rapid gains and losses. 
-                    One example comes on May 12, 2021 when Musk announced on Twitter that Tesla would 
-                    no longer accept Bitcoin as payment. Shortly after, Bitcoin dropped nearly 15%. <br><br>
-                    The Dogecoin graph also shows correlation between early 2021 and 2022. Up to
-                    Dogecoin's peak in May 2021, Musk had been tweeting about it with high frequency 
-                    between January and May. Dogecoin surged by 50% after Musk tweeted "Dogecoin is 
-                    the people's crypto" along with this doge-themed image: </p>
-                <center>
-                    <div class="twitter-tweet twitter-tweet-rendered"
-                        style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;">
-                        <iframe id="twitter-widget-5" scrolling="no" frameborder="0"
-                            allowtransparency="true" allowfullscreen="true" class=""
-                            style="position: absolute; visibility: hidden; width: 0px; height: 0px; display: block; flex-grow: 1;"
-                            title="Twitter Tweet"
-                            src="https://platform.twitter.com/embed/Tweet.html?dnt=false&amp;embedId=twitter-widget-5&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvZmYiLCJ2ZXJzaW9uIjpudWxsfX0%3D&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=1357236825589432322&amp;lang=en&amp;origin=https%3A%2F%2Fwww3.nd.edu%2F~skumar5%2Fteaching%2Fadditional%2Fspring-2022-eg%2Fproject-06-15%2F&amp;sessionId=39004bd4376ca0599e7919f54f52386b652050c3&amp;theme=light&amp;widgetsVersion=1bfeb5c3714e8%3A1661975971032&amp;width=550px"
-                            data-tweet-id="1357236825589432322"></iframe>
-                    </div>
-                    <blockquote class="twitter-tweet"
-                        data-twitter-extracted-i1663879934028659336="true">
-                        <p lang="en" dir="ltr">ur welcome <a
-                                href="https://t.co/e2KF57KLxb">pic.twitter.com/e2KF57KLxb</a>
-                        </p>— Elon Musk (@elonmusk)
-                        <a
-                            href="https://twitter.com/elonmusk/status/1357236825589432322?ref_src=twsrc%5Etfw">February
-                            4, 2021</a>
-                    </blockquote>
-                    <script async="" src="https://platform.twitter.com/widgets.js"
-                        charset="utf-8"></script>
-                </center>
-                <p>The Tesla graph shows the similarly sporadic tweet frequencies and Tesla prices. While 
-                    the vizualization itself shows no obvious correlation, a look at specific instances
-                    lends credence to a correlation. For example, on May 1, 2020, Musk tweeted "Tesla stock price 
-                    is too high imo," leading to Tesla stock dropping 10% soon after. On April Fools Day 2018, Musk
-                    tweeted that "Tesla has gone completely and totally bankrupt," which led to Tesla stock dropping by more than
-                    8%. <br><br> 
-                    The Twitter graph shows little correlation between his tweets and Twitter stock.
-                    Given the current events with Musk's acquisition of Twitter, perhaps data for more 
-                    recent dates would show a correlation. </p>
-                <h2 style="font-size:50px;">Tweets and Google Trends</h2>
-                <!-- The beginning of the Google trends section-->
-                <div class="row">
-                <iframe src="plotly/viz_trends_tweets.html" scrolling="0" frameborder="0" width="1250" height="825"></iframe>
-                <p>The graphs above show the Google Search trends for "Bitcoin," "Dogecoin," "Elon Musk,"
-                    "Tesla," and "SpaceX" plotted on top of Musk's tweet frequency related to the respective
-                    topic. All data is normalized for more effective comparison. <br><br>
-                    The Bitcoin graph shows strong correlation between Musk's tweets and Bitcoin's
-                    search popuarity. Almost all of Musk's highest frequency days align with or near 
-                    local maximums in Google searches. <br><br>
-                    The Dogecoin graph shows a correlation, as well. The highest peaks in Google searches coincide
-                    with high frequencies of Musk's Dogecoin tweets. Local maximums in searches after July 2021
-                    also mostly occur near to a number of Dogecoin tweets. <br><br>
-                    Unlike the other four graphs, the Elon Musk graph plots the frequency of all his
-                    tweets. Interestingly, the highest peak in tweet frequency aligns with the highest peak
-                    in Google Search trends. However, it is difficult to discern a clear correlation from this
-                    visualization as it is a sporadic distribution. <br><br>
-                    The Tesla graph shows a slight correlation between Musk's Tesla-related tweet frequency
-                    and Tesla search trends. As Musk's tweet frequency got more dense over time, search trends
-                    generally increased. During March 2018, April 2019, Feb 2020, Jul 2020, Nov 2021, and
-                    April 2022, leaps in search trends coincided with leaps in tweet frequency. <br><br>
-                    The SpaceX graph shows no correlation between search trends and Musk's SpaceX-related
-                    tweet frequency. Despite a massive number of tweets from April 2018 to April 2020,
-                    SpaceX search trends saw no massive change. </p>
-                    <br><br>
-                </div>
-                <div class="row">
-                        <h1 style="font-size:50px">Conclusion</h1>
-                        <p>Elon Musk is certainly unique. His famous Twitter page offers humor, a revolutionary vision 
-                            for the future, and tweets that surge and sink markets. His recent acquisition of Twitter 
-                            brings things to a whole new level. Already being a very powerful and influential man, we
-                            can only wonder---what's next? </p>
-                        <center>
-                            <img src="https://phototass3.cdnvideo.ru/width/1020_b9261fa1/tass/m2/en/uploads/i/20210402/1308273.jpg"
-                                width="600" height="400" alt="FAIL">
-                        </center>
-                </div>
-                <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-                    crossorigin="anonymous">
-                    </script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-                    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-                    crossorigin="anonymous">
-                    </script>
-                <iframe scrolling="no" frameborder="0" allowtransparency="true"
-                    src="https://platform.twitter.com/widgets/widget_iframe.c4bdc17e77719578b594d5555bee90db.html?origin=https%3A%2F%2Fwww3.nd.edu"
-                    title="Twitter settings iframe" style="display: none;"></iframe><iframe
-                    id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true"
-                    allowfullscreen="true"
-                    style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;"
-                    title="Twitter analytics iframe"></iframe>
+    <p class="twitter-titles">1. The coronavirus panic is dumb</p>
+
+    <blockquote class="twitter-tweet" data-twitter-extracted-i1663879934028659336="true">
+        <p lang="en" dir="ltr">The coronavirus panic is dumb</p>
+        — Elon Musk (@elonmusk)
+        <a href="https://twitter.com/elonmusk/status/1236029449042198528?ref_src=twsrc%5Etfw">March 6, 2020</a>
+    </blockquote>
+    <p class="twitter-titles">2. Had to be done ur welcome</p>
+    <p></p>
+
+    <blockquote class="twitter-tweet" data-twitter-extracted-i1663879934028659336="true">
+        <p lang="en" dir="ltr">
+            Had to been done ur welcome
+            <a href="https://t.co/7jT0f9lqIS">pic.twitter.com/7jT0f9lqIS</a>
+        </p>
+        — Elon Musk (@elonmusk)
+        <a href="https://twitter.com/elonmusk/status/1053390822991790083?ref_src=twsrc%5Etfw">October 19, 2018</a>
+    </blockquote>
+    <p class="twitter-titles">3. ur welcome</p>
+
+    <blockquote class="twitter-tweet" data-twitter-extracted-i1663879934028659336="true">
+        <p lang="en" dir="ltr">
+            ur welcome
+            <a href="https://t.co/e2KF57KLxb">pic.twitter.com/e2KF57KLxb</a>
+        </p>
+        — Elon Musk (@elonmusk)
+        <a href="https://twitter.com/elonmusk/status/1357236825589432322?ref_src=twsrc%5Etfw">February 4, 2021</a>
+    </blockquote>
+    <p class="twitter-titles">
+        4. My 14-year-old son, Saxon, said he feels like 2021 will be a good year.
+        I agree. Let us all make it so.
+    </p>
+
+    <blockquote class="twitter-tweet" data-twitter-extracted-i1663879934028659336="true">
+        <p lang="en" dir="ltr">
+            My 14-year-old son, Saxon, said he feels like 2021 will be a good year.
+            I agree. Let us all make it so.
+        </p>
+        — Elon Musk (@elonmusk)
+        <a href="https://twitter.com/elonmusk/status/1347978218494513152?ref_src=twsrc%5Etfw">January 9, 2021</a>
+    </blockquote>
+    <p class="twitter-titles">5. You can now buy a Tesla with Bitcoin</p>
+
+    <blockquote class="twitter-tweet" data-twitter-extracted-i1663879934028659336="true">
+        <p lang="en" dir="ltr">You can now buy a Tesla with Bitcoin</p>
+        — Elon Musk (@elonmusk)
+        <a href="https://twitter.com/elonmusk/status/1374617643446063105?ref_src=twsrc%5Etfw">March 24, 2021</a>
+    </blockquote>
+    <hr />
+    <h3>Tweet Frequency</h3>
+    <p>
+        Next, I generated graphs to depict Elon Musk's tweet frequency:
+    </p>
+    <div class="plotly-container">
+        <iframe class="plotly-visualizations" scrolling="no" src="plotly/viz_tweet_freq.html" height="550"
+            width="2160"></iframe>
+    </div>
+
+    <p>
+        The visualizations display Elon Musk's tweet frequency categorized by
+        month (1-12) and day (1-31). Upon examining the Tweet Frequency vs. Month
+        plot, we observe that Musk is most active on Twitter during July and May,
+        respectively, while his tweet frequency tends to be higher in the first
+        half of the year compared to the second half, with September seeing the
+        least amount of tweets. In terms of individual dates, the Tweet Frequency
+        vs. Day plot indicates that the 25th of each month is his most frequently
+        used day to tweet. The plot displays a relatively uniform distribution,
+        indicating that Musk maintains a consistent tweeting pattern throughout
+        each month.
+    </p>
+    <hr>
+    <h3>Tweet Interactions</h3>
+    <p>Then, I generated graphs to depict Elon Musk's Twitter Twitter interactions:</p>
+    <div class="plotly-container">
+        <iframe class="plotly-visualizations" scrolling="no" src="plotly/viz_likes_retweets_replies.html" height="550"
+            width="2160"></iframe>
+    </div>
+    <div class="margin"></div>
+    <div class="plotly-container">
+        <iframe class="plotly-visualizations" scrolling="no" src="plotly/viz_likes_retweets_replies_cont.html"
+            height="550" width="2160"></iframe>
+    </div>
+
+    <p>
+        The following visualizations depict Elon Musk's Twitter activity in terms
+        of likes, retweets, and replies from 2010 to March 2022. The upper plots
+        display the distribution by year, while the lower plots break down the
+        distribution by day. Interestingly, the likes, retweets, and replies
+        exhibit similar trends in both the upper and lower sets. The plots reveal
+        that Elon Musk's popularity on Twitter skyrocketed, particularly from 2016
+        onward. Moreover, his Twitter interactions are on track to surpass
+        previous years' records and reach new heights in 2022.
+    </p>
+    <hr />
+    <h3>Tweet Sentiment</h3>
+    <p>
+        I utilized two popular sentiment analysis tools, VADER and TextBlob,
+        to investigate the sentiment of Elon Musk's tweets;
+    </p>
+    <div class="plotly-container">
+        <iframe class="plotly-visualizations" scrolling="no" src="plotly/viz_subj_pol.html" height="550"
+            width="2160"></iframe>
+    </div>
+    <div class="plotly-container">
+        <iframe class="plotly-visualizations" scrolling="no" src="plotly/viz_vader.html" height="550"
+            width="2160"></iframe>
+    </div>
+    <p>
+        The two graphs employ different sentiment analysis techniques to evaluate
+        the emotional tone of Elon Musk's tweets. The upper graph, Tweet
+        Subjectivity vs. Polarity, utilizes the TextBlob sentiment analyzer to
+        produce two scores per tweet: subjectivity, which gauges the level of
+        objectivity or opinion in the tweet, and polarity, which measures the
+        degree of emotional positivity or negativity. Hovering over a point on the
+        plot allows you to view the corresponding tweet. On the other hand, the
+        Tweet Frequency vs. VADER Polarity graph employs the VADER (Valence Aware
+        Dictionary and sEntiment Reasoner) analysis to display the frequency of
+        positive or negative sentiments with scores ranging from -1 to 1. VADER is
+        optimized for social media data.
+        <br /><br />
+        Both graphs demonstrate that Elon Musk predominantly tweets with positive
+        sentiments. The upper plot displays an approximately inverted bell curve,
+        with the majority of his tweets centered around zero subjectivity and zero
+        polarity. The data on the lower plot is skewed to the left, with the
+        highest concentration of tweets receiving a VADER score between +0.4 and
+        +0.45. An independent Python calculation reveals that using TextBlob, the
+        ratio of positive to negative tweets is 3.59, while with VADER, it is
+        3.30. These findings further emphasize that Musk's Twitter account has a
+        higher concentration of positive tweets than negative ones.
+    </p>
+    <hr />
+    <h3>Most Commonly Used Words</h3>
+    <p>
+        Here, I generated a WordCloud to visualize the most frequently
+        used words in Elon Musk's tweets:
+    </p>
+    <br />
+    <br />
+    <img src="./assets/wordcloud.jpg" alt="Elon Musk word clouds" width="100%" />
+    <p>
+        The four word clouds above shows Musk's most commonly tweeted words among
+        all his tweets, his positive tweets, his neutral tweets, and his negative
+        tweets. Common to all the word clouds is "will" being the largest and
+        "Tesla" being the second largest. These results make sense as Musk is a
+        visionary constantly concerned with the future. Tesla is one of his main
+        efforts to make his vision a reality through the production and
+        advancement of electric vehicles. Also common to all the word clouds are
+        words relating to his companies Tesla and SpaceX, such as "car," "rocket,"
+        "model," and "Starship."
+    </p>
+    <hr />
+    <!-- The beginning of the stock market section-->
+    <h2>Tweets and the Stock Market</h2>
+    <p>
+        This section will explore the impact of Elon Musk's tweets on four stocks:
+        Bitcoin, Dogecoin, Tesla, and Twitter:
+    </p>
+    <div class="plotly-container">
+        <iframe class="plotly-visualizations" scrolling="no" src="plotly/viz_stocks_tweets.html" height="850"
+            width="2160"></iframe>
+    </div>
+    <p>
+        The above set of graphs display the normalized stock price and moving
+        50-day average for four relevant stocks: Bitcoin, Dogecoin, Tesla, and
+        Twitter, along with the frequency of Musk's tweets related to each stock.
+        The time ranges for each graph are selected based on the relevance of the
+        stock and Musk's tweets.
+        <br /><br />
+        The Bitcoin graph reveals a clear correlation between Musk's Twitter
+        activity and Bitcoin's stock trends. From late 2020 to late 2021, Musk's
+        tweet frequency related to Bitcoin increased around the same time as
+        Bitcoin experienced rapid gains and losses. For instance, on May 12, 2021,
+        when Musk announced via Twitter that Tesla would no longer accept Bitcoin
+        as payment, the cryptocurrency's value plummeted by nearly 15%.
+        <br /><br />
+        Similarly, the Dogecoin graph also depicts a correlation between Musk's
+        tweets and the cryptocurrency's stock trends. Between January and May
+        2021, leading up to Dogecoin's peak in May, Musk tweeted about it with
+        high frequency. In fact, Dogecoin surged by 50% after Musk tweeted
+        "Dogecoin is the people's crypto" accompanied by a doge-themed image:
+    </p>
+    <center>
+        <blockquote class="twitter-tweet" data-twitter-extracted-i1663879934028659336="true">
+            <p lang="en" dir="ltr">
+                ur welcome
+                <a href="https://t.co/e2KF57KLxb">pic.twitter.com/e2KF57KLxb</a>
+            </p>
+            — Elon Musk (@elonmusk)
+            <a href="https://twitter.com/elonmusk/status/1357236825589432322?ref_src=twsrc%5Etfw">February 4, 2021</a>
+        </blockquote>
+    </center>
+    <p>
+        The Tesla graph displays a similar pattern of sporadic tweet frequencies
+        and Tesla prices. Although there appears to be no obvious correlation in
+        the visualization, examining specific instances lends credence to a
+        correlation between Musk's tweets and Tesla's stock price. For instance,
+        on May 1, 2020, Musk tweeted "Tesla stock price is too high imo," causing
+        Tesla's stock to drop 10% soon after. Additionally, on April Fools Day
+        2018, Musk tweeted that "Tesla has gone completely and totally bankrupt,"
+        resulting in Tesla's stock falling by over 8%.
+        <br /><br />
+        The Twitter graph shows little correlation between his tweets and Twitter
+        stock. However, given Musk's recent acquisition of Twitter, more recent
+        data may reveal a correlation.
+    </p>
+    <hr />
+    <!-- The beginning of the Google trends section-->
+    <h2>Tweets and Google Trends</h2>
+    <p>
+        This section will explore the impact of Elon Musk's tweets on Google
+        Search trends for five search words: "Bitcoin", "Dogecoin", "Elon Musk",
+        "Tesla", and "SpaceX":
+    </p>
+    <div class="plotly-container">
+        <iframe class="plotly-visualizations" scrolling="no" src="plotly/viz_trends_tweets.html" height="825"
+            width="2160"></iframe>
+    </div>
+    <p>
+        The graphs above illustrate the normalized Google Search trends for
+        "Bitcoin," "Dogecoin," "Elon Musk," "Tesla," and "SpaceX," along with
+        Musk's tweet frequency for each topic. <br /><br />
+        The Bitcoin graph exhibits a strong correlation between Musk's tweets and
+        Bitcoin's search popularity. Most of Musk's highest tweet frequency days
+        align with local maximums in Google searches for Bitcoin. <br /><br />
+        Similarly, the Dogecoin graph also shows a correlation between high Google
+        search trends and high frequencies of Musk's Dogecoin tweets. Local
+        maximums in searches after July 2021 align with a number of Dogecoin
+        tweets. <br /><br />
+        In contrast to the other four graphs, the Elon Musk graph plots the
+        frequency of all his tweets. Interestingly, the highest peak in tweet
+        frequency aligns with the highest peak in Google Search trends. However,
+        this visualization has a sporadic distribution and makes it difficult to
+        discern a clear correlation. <br /><br />
+        The Tesla graph demonstrates a slight correlation between Musk's
+        Tesla-related tweet frequency and Tesla search trends. As Musk's tweet
+        frequency increased over time, search trends generally increased as well.
+        Leaps in search trends coincided with leaps in tweet frequency during
+        March 2018, April 2019, Feb 2020, Jul 2020, Nov 2021, and April 2022.
+        <br /><br />
+        Finally, the SpaceX graph indicates no correlation between search trends
+        and Musk's SpaceX-related tweet frequency. Despite a massive number of
+        tweets from April 2018 to April 2020, SpaceX search trends saw no
+        significant change.
+    </p>
+    <hr />
+    <h2>Conclusion</h2>
+    <p>
+        Elon Musk is undoubtedly a one-of-a-kind individual. His Twitter account
+        is known for its humor, visionary ideas, and the ability to impact
+        financial markets with his tweets. With his recent acquisition of Twitter,
+        it's clear that Musk is taking things to a whole new level. As a highly
+        influential and powerful figure, we can only anticipate what he has in
+        store for the future.
+    </p>
+    <center>
+        <img src="./assets/images/elon_musk_6.jpg" width="100%" alt="picture of Elon Musk" />
+        <footer>
+            <p>&copy; 2023 John Flanagan - this website is licensed under the terms of the <a
+                    href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+        </footer>
+    </center>
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
-<loom-container id="lo-engage-ext-container">
-    <loom-shadow classname="resolved"></loom-shadow>
-</loom-container>
-<loom-container id="lo-companion-container">
-    <loom-shadow classname="resolved"></loom-shadow>
-</loom-container>
-<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
 </html>
