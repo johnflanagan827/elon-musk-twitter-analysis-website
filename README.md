@@ -1,7 +1,7 @@
 # Elon Musk Twitter Analysis Website
 <img height="150px" src="https://user-images.githubusercontent.com/69359897/226143847-47406a82-8978-488b-a3c5-29adfdd5b2ec.png">
 
-This [website](https://johnflanagan827.github.io/Elon-Musk-Twitter-Analysis-Website/) is a data visualization project that analyzes the style and influence of Elon Musk's tweets. The website was created using Bootstrap, HTML, and CSS, and includes a carousel with images at the top, embedded tweets, and interactive graphs.
+This [website](https://johnflanagan827.github.io/elon-musk-twitter-analysis-website/) is a data visualization project that analyzes the style and influence of Elon Musk's tweets. The website was created using Bootstrap, HTML, and CSS, and includes a carousel with images at the top, embedded tweets, and interactive graphs.
 
 ## Project Code
 - `final_elon_musk_twitter_project.ipynb` is a Jupyter Notebook that contains Python code to organize data into [Pandas](https://pandas.pydata.org/) DataFrames and create visualizations with libraries such as [Matplotlib](https://matplotlib.org/), [Plotly](https://plotly.com/), and [wordcloud](https://pypi.org/project/wordcloud/). The code further determines Elon Musk’s overall sentiment, emotions, and influence on the stock market & Google Search Trends using libraries such as [TextBlob](https://textblob.readthedocs.io/en/dev/), [NLTK](https://www.nltk.org/), [yfinance](https://pypi.org/project/yfinance/), and [Pytrends](https://pypi.org/project/pytrends/).
