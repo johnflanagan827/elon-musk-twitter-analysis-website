@@ -74,6 +74,13 @@ h4 {
     margin-top: -8rem;
 }
 
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 footer {
     margin-top: 2rem;
 }
@@ -129,5 +136,11 @@ footer {
         margin-top: -10rem;
         margin-bottom: -10rem;
         transform: scale(0.2);
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    .large-hidden {
+        display: none;
     }
 }
